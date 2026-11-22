@@ -1,0 +1,12 @@
+# Saved browser sessions (cookies / SSO tokens) - never commit
+profile/
+profile-*/
+**/profile/
+
+# Dependencies
+node_modules/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+*.log

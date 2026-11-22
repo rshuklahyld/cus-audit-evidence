@@ -1,0 +1,72 @@
+{
+  "agent": "Agent Name : Github Administrator Listing",
+  "version": "1.0",
+  "results": [
+    {
+      "repo": "HylandExperience/fcc-cus-component-registration",
+      "url": "https://github.com/HylandExperience/fcc-cus-component-registration/settings/access",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    },
+    {
+      "repo": "HylandExperience/fcc-cus-guided-upgrade-assistant",
+      "url": "https://github.com/HylandExperience/fcc-cus-guided-upgrade-assistant/settings/access",
+      "status": "ok",
+      "directAccessClicked": true,
+      "role": "Admin",
+      "roleFilterApplied": true,
+      "capturedAt": "2026-11-22 14:00:57 (UTC+05:30)",
+      "file": "fcc-cus-guided-upgrade-assistant Github Administrator Listing 20261122-140057.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-cus-server-inventory",
+      "url": "https://github.com/HylandExperience/fcc-cus-server-inventory/settings/access",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-artifact-registry",
+      "url": "https://github.com/HylandExperience/fcc-seu-artifact-registry/settings/access",
+      "status": "ok",
+      "directAccessClicked": true,
+      "role": "Admin",
+      "roleFilterApplied": true,
+      "capturedAt": "2026-11-22 14:02:14 (UTC+05:30)",
+      "file": "fcc-seu-artifact-registry Github Administrator Listing 20261122-140214.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-orchestrator",
+      "url": "https://github.com/HylandExperience/fcc-seu-orchestrator/settings/access",
+      "status": "ok",
+      "directAccessClicked": true,
+      "role": "Admin",
+      "roleFilterApplied": true,
+      "capturedAt": "2026-11-22 14:03:04 (UTC+05:30)",
+      "file": "fcc-seu-orchestrator Github Administrator Listing 20261122-140304.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-tenant-inventory",
+      "url": "https://github.com/HylandExperience/fcc-seu-tenant-inventory/settings/access",
+      "status": "ok",
+      "directAccessClicked": true,
+      "role": "Admin",
+      "roleFilterApplied": true,
+      "capturedAt": "2026-11-22 14:03:54 (UTC+05:30)",
+      "file": "fcc-seu-tenant-inventory Github Administrator Listing 20261122-140354.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-ui",
+      "url": "https://github.com/HylandExperience/fcc-seu-ui/settings/access",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    },
+    {
+      "repo": "HylandExperience/tf-config-fccseu-infrastructure",
+      "url": "https://github.com/HylandExperience/tf-config-fccseu-infrastructure/settings/access",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    }
+  ],
+  "aborted": null,
+  "zip": "Github Administrator Listing 20261122-140449.zip"
+}

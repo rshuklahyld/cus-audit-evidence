@@ -1,0 +1,68 @@
+{
+  "agent": "Agent Name : Access To Deploy Changes to Production",
+  "version": "1.2.0",
+  "results": [
+    {
+      "repo": "HylandExperience/fcc-cus-component-registration",
+      "url": "https://github.com/HylandExperience/fcc-cus-component-registration/settings/environments",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    },
+    {
+      "repo": "HylandExperience/fcc-cus-guided-upgrade-assistant",
+      "url": "https://github.com/HylandExperience/fcc-cus-guided-upgrade-assistant/settings/environments",
+      "status": "ok",
+      "environment": "prod-apply",
+      "environmentOpened": true,
+      "capturedAt": "2026-11-22 13:54:54 (UTC+05:30)",
+      "file": "fcc-cus-guided-upgrade-assistant Access To Deploy Changes to Production 20261122-135454.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-cus-server-inventory",
+      "url": "https://github.com/HylandExperience/fcc-cus-server-inventory/settings/environments",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-artifact-registry",
+      "url": "https://github.com/HylandExperience/fcc-seu-artifact-registry/settings/environments",
+      "status": "ok",
+      "environment": "prod-apply",
+      "environmentOpened": true,
+      "capturedAt": "2026-11-22 13:56:00 (UTC+05:30)",
+      "file": "fcc-seu-artifact-registry Access To Deploy Changes to Production 20261122-135600.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-orchestrator",
+      "url": "https://github.com/HylandExperience/fcc-seu-orchestrator/settings/environments",
+      "status": "ok",
+      "environment": "prod-apply",
+      "environmentOpened": true,
+      "capturedAt": "2026-11-22 13:56:42 (UTC+05:30)",
+      "file": "fcc-seu-orchestrator Access To Deploy Changes to Production 20261122-135642.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-tenant-inventory",
+      "url": "https://github.com/HylandExperience/fcc-seu-tenant-inventory/settings/environments",
+      "status": "ok",
+      "environment": "prod-apply",
+      "environmentOpened": true,
+      "capturedAt": "2026-11-22 13:57:22 (UTC+05:30)",
+      "file": "fcc-seu-tenant-inventory Access To Deploy Changes to Production 20261122-135722.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-ui",
+      "url": "https://github.com/HylandExperience/fcc-seu-ui/settings/environments",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    },
+    {
+      "repo": "HylandExperience/tf-config-fccseu-infrastructure",
+      "url": "https://github.com/HylandExperience/tf-config-fccseu-infrastructure/settings/environments",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    }
+  ],
+  "aborted": null,
+  "zip": "Access To Deploy Changes to Production 20261122-135818.zip"
+}

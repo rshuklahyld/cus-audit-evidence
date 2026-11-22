@@ -1,0 +1,39 @@
+{
+  "agentName": "Github Administrator Listing",
+  "displayName": "Agent Name : Github Administrator Listing",
+  "version": "1.0",
+  "createdAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "author": "rakesh.shukla",
+  "description": "On-demand agent. The user signs in to GitHub (SSO + authenticator); the agent then opens each configured repo's Settings > Collaborators and teams, clicks Direct access, filters Role = Admin, adds a highlighted date/time banner and saves a screenshot. Screenshots are zipped per run.",
+  "entryPoint": "agent.mjs",
+  "home": "C:\\WORKSPACE\\Multi Agent\\CUS Audit\\Github Administrator Listing",
+  "runCommand": "npm run run",
+  "testCommand": "npm test",
+  "inputs": {
+    "repos": "repos.json",
+    "outputDir": "screenshots",
+    "role": "Admin"
+  },
+  "outputs": {
+    "screenshotNamePattern": "<repo> Github Administrator Listing <YYYYMMDD-HHMMSS>[ (n)].png",
+    "manifest": "run-manifest-<timestamp>.json",
+    "zip": "<agent name> <YYYYMMDD-HHMMSS>.zip (this run's screenshots, in the output folder)"
+  },
+  "runtime": {
+    "node": ">=20",
+    "browser": "Google Chrome (playwright-core channel 'chrome')"
+  },
+  "safety": [
+    "Human performs authentication; no credentials are stored or handled by the agent",
+    "Aborts on GitHub restriction/rate-limit page; never retries or evades it",
+    "Paced requests (default 5s between repos)"
+  ],
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-11-22",
+      "notes": "Initial release. Derived from Branch Specific Write Access 1.1.0 (login, Okta/SSO wait, restriction abort, pacing, highlighted banner, run zip) with an added Direct access > Role = Admin filter step (configurable via --role or inputs.role)."
+    }
+  ]
+}

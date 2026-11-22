@@ -1,0 +1,58 @@
+{
+  "agentName": "Branch Specific Write Access",
+  "displayName": "Agent Name : Branch Specific Write Access",
+  "version": "1.1.0",
+  "createdAt": "2026-11-19",
+  "updatedAt": "2026-11-22",
+  "author": "rakesh.shukla",
+  "description": "On-demand agent. The user signs in to GitHub (incl. authenticator app); the agent then opens each configured repo's Settings > Collaborators and teams, clicks Direct access, stamps date/time and saves a screenshot.",
+  "entryPoint": "agent.mjs",
+  "home": "C:WORKSPACEMulti AgentCUS AuditBranch Specific Write Access",
+  "runCommand": "npm run run",
+  "testCommand": "npm test",
+  "inputs": {
+    "repos": "repos.json",
+    "outputDir": "screenshots"
+  },
+  "outputs": {
+    "screenshotNamePattern": "<repo> Branch Specific Write Access <YYYYMMDD-HHMMSS>[ (n)].png",
+    "manifest": "run-manifest-<timestamp>.json",
+    "zip": "<agent name> <YYYYMMDD-HHMMSS>.zip (this run's screenshots, in the output folder)"
+  },
+  "runtime": {
+    "node": ">=20",
+    "browser": "Google Chrome (playwright-core channel 'chrome')"
+  },
+  "safety": [
+    "Human performs authentication; no credentials are stored or handled by the agent",
+    "Aborts on GitHub restriction/rate-limit page; never retries or evades it",
+    "Paced requests (default 5s between repos)"
+  ],
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-11-19",
+      "notes": "Initial release. 9 tests passing (unit + fake-GitHub integration)."
+    },
+    {
+      "version": "1.0.1",
+      "date": "2026-11-19",
+      "notes": "Okta/SSO login hardening: do not touch pages on the IdP domain, keep popups/new tabs open, log redirects and browser/tab close or crash events, fail clearly if the browser closes before login."
+    },
+    {
+      "version": "1.0.2",
+      "date": "2026-11-20",
+      "notes": "Fix: org SAML/SSO redirect (GitHub -> Okta) was treated as session lost and closed the browser. Agent now waits for the human to finish SSO, then continues. SSO path detection anchored to /orgs/<org>/saml|sso. 12 tests."
+    },
+    {
+      "version": "1.0.3",
+      "date": "2026-11-20",
+      "notes": "Fix: GitHub redirects to SAML/Okta from page script after domcontentloaded; agent judged the page too early and aborted/closed the browser. Now settles the page (networkidle + 2s) before checking, then waits for the human through SSO/sign-in (up to 3 rounds). Test fake now reproduces delayed redirect."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-11-22",
+      "notes": "Highlighted capture banner (light background chips for repo name and date/time, larger text, inserted at top of page); zip of the run screenshots as \"<agent name> <YYYYMMDD-HHMMSS>.zip\"."
+    }
+  ]
+}

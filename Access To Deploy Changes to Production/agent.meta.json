@@ -1,0 +1,49 @@
+{
+  "agentName": "Access To Deploy Changes to Production",
+  "displayName": "Agent Name : Access To Deploy Changes to Production",
+  "version": "1.2.0",
+  "createdAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "author": "rakesh.shukla",
+  "description": "On-demand agent. The user signs in to GitHub (SSO + authenticator); the agent then opens each configured repo's Settings > Environments, clicks Configure prod-apply (deployment protection rules / who can deploy), stamps date/time and saves a screenshot.",
+  "entryPoint": "agent.mjs",
+  "home": "C:\\WORKSPACE\\Multi Agent\\CUS Audit\\Access To Deploy Changes to Production",
+  "runCommand": "npm run run",
+  "testCommand": "npm test",
+  "inputs": {
+    "repos": "repos.json",
+    "outputDir": "screenshots",
+    "environment": "prod-apply"
+  },
+  "outputs": {
+    "screenshotNamePattern": "<repo> Access To Deploy Changes to Production <YYYYMMDD-HHMMSS>[ (n)].png",
+    "manifest": "run-manifest-<timestamp>.json",
+    "zip": "<agent name> <YYYYMMDD-HHMMSS>.zip (this run's screenshots, in the output folder)"
+  },
+  "runtime": {
+    "node": ">=20",
+    "browser": "Google Chrome (playwright-core channel 'chrome')"
+  },
+  "safety": [
+    "Human performs authentication; no credentials are stored or handled by the agent",
+    "Aborts on GitHub restriction/rate-limit page; never retries or evades it",
+    "Paced requests (default 5s between repos)"
+  ],
+  "changelog": [
+    {
+      "version": "1.0.3",
+      "date": "2026-11-22",
+      "notes": "Initial release of this agent. Derived from Branch Specific Write Access v1.0.3 (login, Okta/SSO wait, restriction abort, pacing). Targets Settings > Environments > production."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-11-22",
+      "notes": "Target is now Settings > Environments > Configure prod-apply (configurable via --env or inputs.environment) instead of production. Manifest records environment and environmentOpened."
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-11-22",
+      "notes": "Highlighted capture banner (light background chips for repo name and date/time, larger text, inserted at top of page); zip of the run screenshots as \"<agent name> <YYYYMMDD-HHMMSS>.zip\"."
+    }
+  ]
+}

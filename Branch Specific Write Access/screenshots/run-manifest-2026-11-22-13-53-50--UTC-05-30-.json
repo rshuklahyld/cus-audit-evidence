@@ -1,0 +1,66 @@
+{
+  "agent": "Agent Name : Branch Specific Write Access",
+  "version": "1.1.0",
+  "results": [
+    {
+      "repo": "HylandExperience/fcc-cus-component-registration",
+      "url": "https://github.com/HylandExperience/fcc-cus-component-registration/settings/access",
+      "status": "ok",
+      "directAccessClicked": false,
+      "capturedAt": "2026-11-22 13:49:51 (UTC+05:30)",
+      "file": "fcc-cus-component-registration Branch Specific Write Access 20261122-134951.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-cus-guided-upgrade-assistant",
+      "url": "https://github.com/HylandExperience/fcc-cus-guided-upgrade-assistant/settings/access",
+      "status": "ok",
+      "directAccessClicked": true,
+      "capturedAt": "2026-11-22 13:50:30 (UTC+05:30)",
+      "file": "fcc-cus-guided-upgrade-assistant Branch Specific Write Access 20261122-135030.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-cus-server-inventory",
+      "url": "https://github.com/HylandExperience/fcc-cus-server-inventory/settings/access",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-artifact-registry",
+      "url": "https://github.com/HylandExperience/fcc-seu-artifact-registry/settings/access",
+      "status": "ok",
+      "directAccessClicked": true,
+      "capturedAt": "2026-11-22 13:51:36 (UTC+05:30)",
+      "file": "fcc-seu-artifact-registry Branch Specific Write Access 20261122-135136.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-orchestrator",
+      "url": "https://github.com/HylandExperience/fcc-seu-orchestrator/settings/access",
+      "status": "ok",
+      "directAccessClicked": true,
+      "capturedAt": "2026-11-22 13:52:15 (UTC+05:30)",
+      "file": "fcc-seu-orchestrator Branch Specific Write Access 20261122-135215.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-tenant-inventory",
+      "url": "https://github.com/HylandExperience/fcc-seu-tenant-inventory/settings/access",
+      "status": "ok",
+      "directAccessClicked": true,
+      "capturedAt": "2026-11-22 13:52:53 (UTC+05:30)",
+      "file": "fcc-seu-tenant-inventory Branch Specific Write Access 20261122-135253.png"
+    },
+    {
+      "repo": "HylandExperience/fcc-seu-ui",
+      "url": "https://github.com/HylandExperience/fcc-seu-ui/settings/access",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    },
+    {
+      "repo": "HylandExperience/tf-config-fccseu-infrastructure",
+      "url": "https://github.com/HylandExperience/tf-config-fccseu-infrastructure/settings/access",
+      "status": "failed",
+      "error": "Settings page not found (no admin access or repo missing)"
+    }
+  ],
+  "aborted": null,
+  "zip": "Branch Specific Write Access 20261122-135350.zip"
+}
